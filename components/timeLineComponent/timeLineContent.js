@@ -6,11 +6,11 @@ import { colors, size } from '../styles.js';
 const TimeLineContent = ({ icon, title, description }) => {
   return (
     <View style={styles.container}>
-        <View style={styles.titleContainer}>
-            <Image source={icon}/>
+        <Image source={icon}/>
+        <View>
             <Text fontSize='medium' style={styles.titleTextStyle}> {title} </Text>
+            <Text fontSize='medium'> {description} </Text>
         </View>
-        <Text fontSize='medium'> {description} </Text>
     </View>
   )
 }
@@ -18,8 +18,6 @@ const TimeLineContent = ({ icon, title, description }) => {
 const styles = StyleSheet.create({
   container: {
     marginBottom: size.defaultMargin,
-  },
-  titleContainer: {
     flexDirection: 'row'
   },
   titleTextStyle: {
